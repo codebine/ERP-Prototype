@@ -1,0 +1,28 @@
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: #71639e !important;
+}
+.navbar-brand {
+    color: white !important;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show .nav-link{
+     color: white !important;
+}
+
+
+.container-custom {
+    margin-top: 20px;
+}
+.search-bar {
+    display: flex;
+    justify-content: flex-end;
+}
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.options > * {
+    margin-left: 10px;
+}

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/circulation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="dropdown">
+                <a class="icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-th" aria-hidden="true"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="circulation-dashboard.html">Circulation</a></li>
+                    <li><a class="dropdown-item" href="reta-dashboard.html">Reta</a></li>
+                    <li><a class="dropdown-item" href="nap.html">NAP</a></li>
+                    <li><a class="dropdown-item" href="#">Classifides</a></li>
+                    <li><a class="dropdown-item" href="agent-dashboard.html">Agent</a></li>
+                    <li><a class="dropdown-item" href="trans-dashboard.html">Transportation</a></li>
+                    <li><a class="dropdown-item" href="mgmt-dashboard.html">Management</a></li>
+                </ul>
+            </div>
+            <a class="navbar-brand" href="#">Circulation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="agent-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Agents
+                        </a>
+                       <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cir.html">Draft Agents</a></li>
+                            <li><a class="dropdown-item" href="cir.html">Validation in Process Agents</a></li>
+                            <li><a class="dropdown-item" href="cir.html">Approved Agents</a></li>
+                            <li><a class="dropdown-item" href="cir.html">Rejected Agents</a></li>
+                            <li><a class="dropdown-item" href="cir.html">All Agents</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Account Deposit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Complaints Registry</a>
+                    </li>
+                </ul>
+
+            </div>
+            <img src="image/Basic_Ui_(186).jpg" style="width: 40px;border-radius: 40px;"> <b
+                style="color: #fff;">Admin</b>
+        </div>
+
+        </div>
+    </nav>
+    <!-- Header  -->
+    <!--Cards-->
+    <div class="container-fluid">
+        <div
+            style="background:#aae4f5; padding:10px; font-size:14px; width:100%; border-bottom-left-radius: 27px 27px; border-bottom-right-radius: 27px 27px;">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div id="welcomenote" class="col-lg-11 welcomenote common_margin"
+                        style="font-weight:bold; font-size:16px;">Welcome to Circulation Management Dashboard.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row ">
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <a class="card_header hdr6_bg_color">
+                        <div class="card_header_left">
+                            Agents
+                        </div>
+                        <div class="card_header_right">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <div class="text-center padding_cir ">
+                        <div class="row draft_agents_records com_cir_width">
+                            <div class="col">Draft :</div>
+                            <div class="col">
+                                <div class="draft_agents_count" id="draft_agents"><span>1658</span></div>
+                            </div>
+                        </div>
+
+                        <div class="row validation_agents_records">
+                            <div class="col">Validation :</div>
+                            <div class="col">
+                                <div class="validation_agents_count" id="validation_agents"><span>47</span></div>
+                            </div>
+                        </div>
+
+                        <div class="row approved_agents_records">
+                            <div class="col">Approved :</div>
+                            <div class="col">
+                                <div class="approved_agents_count" id="approved_agents"><span>76</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <div>
+                            <a class="card_header hdr1_bg_color" href="deposit.html">
+                                <div>
+                                    <div class="card_header_left">
+
+                                        Deposit
+                                    </div>
+                                </div>
+                                <div class="card_header_right">
+                                    <i class="fa fa-money" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <div class="text-center padding_cir ">
+                                <div class="row waiting_deposit_records com_cir_width">
+                                    <div class="col">Waiting :</div>
+                                    <div class="col">
+                                        <div class="waiting_deposit_count" id="account_deposit_waiting"><span>13</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row running_deposit_records">
+                                    <div class="col">Running :</div>
+                                    <div class="col">
+                                        <div class="running_deposit_count" id="account_deposit_running"><span>364</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row closed_deposit_records">
+                                    <div class="col">Closed :</div>
+                                    <div class="col">
+                                        <div class="closed_deposit_count" id="account_deposit_closed"><span>97</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <div>
+                            <a class="card_header hdr2_bg_color">
+                                <div>
+                                    <div class="card_header_left">
+                                        Demand Request
+                                    </div>
+                                    <div class="card_header_right">
+                                        <i class="fa fa-percent" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="text-center padding_cir ">
+                                <div class="row demand_request_waiting_records com_cir_width">
+                                    <div class="col">Waiting :</div>
+                                    <div class="col">
+                                        <div class="waiting_demand_request_count" id="waiting_count"><span>69</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row demand_request_approved_records">
+                                    <div class="col">Approved :</div>
+                                    <div class="col">
+                                        <div class="demand_request_approved_count" id="approved_count"><span>478</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row demand_request_rejected_records">
+                                    <div class="col">Rejected :</div>
+                                    <div class="col">
+                                        <div class="demand_request_rejected_count" id="rejected_count"><span>61</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <div>
+                            <a class="card_header hdr4_bg_color">
+                                <div class="card_header_left">
+                                    Print Orders
+                                </div>
+                                <div class="card_header_right">
+                                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center padding_cir">
+                            <div class="row no_of_internal_order_demand_records com_cir_width">
+                                <div class="col">Demand :</div>
+                                <div class="col">
+                                    <div class="internal_order_demand_count" id="internal_order_demand"><span>124</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no_of_internal_order_demand_sent_records">
+                                <div class="col">Sent:</div>
+                                <div class="col">
+                                    <div class="internal_order_demand_sent_count" id="internal_order_sent">
+                                        <span>22</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no_of_internal_order_demand_confirmed_records">
+                                <div class="col">Confirmed :</div>
+                                <div class="col">
+                                    <div class="internal_order_confirmed_count" id="internal_order_sale">
+                                        <span>175</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no_of_internal_order_demand_locked_records">
+                                <div class="col">Locked :</div>
+                                <div class="col">
+                                    <div class="internal_order_locked_count" id="internal_order_done"><span>78</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <div>
+                            <a class="card_header hdr3_bg_color">
+                                <div>
+                                    <div class="card_header_left">
+                                        Indent Supplied
+                                    </div>
+                                    <div class="card_header_right">
+                                        <i class="fa fa-indent" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center indent_records padding_cir ">
+                            <div class="row com_cir_width">
+                                <div class="col ">Total Copies:</div>
+                                <div class="col">
+                                    <div class="indent_supplied_records_count" id="total_qty_today"><span>7333</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <div>
+                            <a class="card_header hdr1_bg_color">
+                                <div>
+                                    <div class="card_header_left">
+                                        MRP Paper Printed
+                                    </div>
+                                </div>
+                                <div class="card_header_right">
+                                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <div class="text-center padding_cir">
+                                <div class="row mrp_print_demand_records com_cir_width">
+                                    <div class="col">Demand :</div>
+                                    <div class="col">
+                                        <div class="mrp_print_demand_records_count" id="order_qty_sum"><span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mrp_print_demand_records ">
+                                    <div class="col">Supplied :</div>
+                                    <div class="col">
+                                        <div class="mrp_print_supplied_demand_records_count" id="supplied_qty_sum">
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <div>
+                            <a class="card_header hdr2_bg_color">
+                                <div>
+                                    <div class="card_header_left">
+                                        Dispatch
+                                    </div>
+                                    <div class="card_header_right">
+                                        <i class="fa fa-truck" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="text-center dispatch_records ">
+                                <div class="row com_cir_width">
+                                    <div class="col">Count :</div>
+                                    <div class="col">
+                                        <div class="dispatch_records_count" id="stock_move_line"><span>0</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <div>
+                            <a class="card_header hdr5_bg_color">
+                                <div class="card_header_left">
+                                    Agent Commissions
+                                </div>
+                                <div class="card_header_right">
+                                    <i class="fa fa-percent" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <div class="text-center agent_comm_line_records">
+                                <div class="row com_cir_width">
+                                    <div class="col">Count :</div>
+                                    <div class="col">
+                                        <div class="agent_comm_records_count" id="agent_commission_details">
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <div>
+                            <a class="card_header hdr4_bg_color">
+                                <div class="card_header_left">
+                                    Complaint Registry
+                                </div>
+                                <div class="card_header_right">
+                                    <i class="fa fa-indent" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <div class="row return_request_line_waiting_rec_records com_cir_width">
+                                <div class="col ">Waiting :</div>
+                                <div class="col">
+                                    <div class="return_request_line_waiting_count" id="return_request_line_waiting">
+                                        <span>34</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row return_request_line_received_rec_records">
+                                <div class="col">Received :</div>
+                                <div class="col">
+                                    <div class="return_request_line_received_count" id="return_request_line_received">
+                                        <span>3</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row return_request_line_approved_rec_records">
+                                <div class="col">Approved :</div>
+                                <div class="col">
+                                    <div class="return_request_line_approved_count" id="return_request_line_approved">
+                                        <span>36</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row return_request_line_credit_note_done_rec_records">
+                                <div class="col">Credit Note Done :</div>
+                                <div class="col">
+                                    <div class="return_request_line_credit_count"
+                                        id="return_request_line_credit_note_done"><span>96</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <a class="card_header hdr6_bg_color">
+                            <div class="card_header_left">
+                                Agent Invoices (Bills)
+                            </div>
+                            <div class="card_header_right">
+                                <i class="fa fa-file" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="text-center">
+                            <div class="row account_move_out_total_records com_cir_width">
+                                <div class="col">Total :</div>
+                                <div class="col">
+                                    <div class="agent_invoice_out_total_count" id="agent_invoice_total">
+                                        <span>21935454.34</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row account_move_out_total_records">
+                                <div class="col">Paid :</div>
+                                <div class="col">
+                                    <div class="agent_invoice_out_paid_count" id="agent_invoice_paid">
+                                        <span>16849.98</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row account_move_out_total_records">
+                                <div class="col">Due :</div>
+                                <div class="col">
+                                    <div class="agent_invoice_out_due_count" id="agent_invoice_due">
+                                        <span>21637610.85</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <a class="card_header hdr1_bg_color">
+                            <div class="card_header_left">
+                                Payment Collections
+                            </div>
+                            <div class="card_header_right">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="text-center">
+                            <div class="row payment_bank_inbound_total_records com_cir_width">
+                                <div class="col">Bank :</div>
+                                <div class="col">
+                                    <div class="account_payment_bank_count" id="account_payment_bank"><span>468</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row payment_cash_inbound_total_records">
+                                <div class="col">Cash :</div>
+                                <div class="col">
+                                    <div class="account_payment_cash_count" id="account_payment_cash"><span>2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <a class="card_header hdr6_bg_color">
+                            <div class="card_header_left">
+                                Transportation Bills
+                            </div>
+                            <div class="card_header_right">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="text-center">
+                            <div class="row total_rec_transportation_bills_rec_records com_cir_width">
+                                <div class="col">Total :</div>
+                                <div class="col">
+                                    <div class="total_rec_transportation_bills_count" id="agent_invoice_total_in">
+                                        <span>205050.58</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row total_rec_transportation_bills_rec_records">
+                                <div class="col">Due :</div>
+                                <div class="col">
+                                    <div class="due_rec_transportation_bills_count" id="agent_invoice_due_in">
+                                        <span>206054.27</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row  mt-3">
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <a class="card_header hdr4_bg_color">
+                            <div class="card_header_left">
+                                Operators
+                            </div>
+                            <div class="card_header_right">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="text-center">
+                            <div class="row no_of_draft_operators_records com_cir_width">
+                                <div class="col">Draft :</div>
+                                <div class="col">
+                                    <div class="draft_operators_count" id="operators_draft"><span>423</span></div>
+                                </div>
+                            </div>
+                            <div class="row no_of_validation_operators_records">
+                                <div class="col">Validated :</div>
+                                <div class="col">
+                                    <div class="validation_operators_count" id="operators_validation"><span>18</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no_of_approved_operators_records">
+                                <div class="col">Approved :</div>
+                                <div class="col">
+                                    <div class="approved_operators_count" id="operators_approved"><span>214</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <a class="card_header hdr2_bg_color">
+                            <div class="card_header_left">
+                                Operators Advance
+                            </div>
+                            <div class="card_header_right">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="text-center">
+                            <div class="row no_of_operator_advance_draft_records com_cir_width">
+                                <div class="col">Draft :</div>
+                                <div class="col">
+                                    <div class="no_of_operator_advance_draft_count" id="operators_advance">
+                                        <span>9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no_of_operator_advance_running_records">
+                                <div class="col">Running :</div>
+                                <div class="col">
+                                    <div class="operator_advance_running_count" id="operators_advance_running">
+                                        <span>28</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no_of_operator_advance_closed_records">
+                                <div class="col">Closed :</div>
+                                <div class="col">
+                                    <div class="operator_advance_closed_count" id="operators_advance_closed">
+                                        <span>2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <a class="card_header hdr6_bg_color">
+                            <div class="card_header_left">
+                                Route
+                            </div>
+                            <div class="card_header_right">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="text-center">
+                            <div class="row transport_vehicles_draft_records com_cir_width">
+                                <div class="col">Draft :</div>
+                                <div class="col">
+                                    <div class="absent_vehicles_count" id="transportation_vehicles_draft">
+                                        <span>49</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row transport_vehicles_running_records">
+                                <div class="col">Running :</div>
+                                <div class="col">
+                                    <div class="transport_vehicles_running_count" id="transportation_vehicles_running">
+                                        <span>62</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row transport_vehicles_closed_records">
+                                <div class="col">Closed :</div>
+                                <div class="col">
+                                    <div class="transport_vehicles_closed_count" id="transportation_vehicles_closed">
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 text-center common_margin">
+                <div class="h-100 w-100 common_card">
+                    <div role="button">
+                        <a class="card_header hdr6_bg_color">
+                            <div class="card_header_left">
+                                Absent Vehicles
+                            </div>
+                            <div class="card_header_right">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="text-center">
+                            <div class="row no_of_absent_vehicles_rec_records com_cir_width">
+                                <div class="col">Count :</div>
+                                <div class="col">
+                                    <div class="absent_vehicles_count" id="absent_vehicle"><span>411</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards-->
+    <!--Graph-->
+    <div class="container-fluid mt-3">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-6 h-100">
+                    <div class="card w-100 h-100">
+                        <div class="card-header">Graph View</div>
+                        <div class="card-body">
+                            <img class="img-1" src="image/graph-1.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 h-100">
+                    <div class="card w-100 h-100">
+                        <div class="card-header">Graph View</div>
+                        <div class="card-body">
+                            <img class="img-2" src="image/graph-2.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Graph-->
+</body>
+
+</html>
